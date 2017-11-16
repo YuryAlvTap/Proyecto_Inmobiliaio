@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo recinto:</strong>
+  <%= @recinto.tipo_recinto %>
+</p>
+
+<p>
+  <strong>Direccion recinto:</strong>
+  <%= @recinto.direccion_recinto %>
+</p>
+
+<p>
+  <strong>Numero recinto:</strong>
+  <%= @recinto.numero_recinto %>
+</p>
+
+<p>
+  <strong>Comuna recinto:</strong>
+  <%= @recinto.comuna_recinto %>
+</p>
+
+<p>
+  <strong>Ciudad recinto:</strong>
+  <%= @recinto.ciudad_recinto %>
+</p>
+
+<p>
+  <strong>Region recinto:</strong>
+  <%= @recinto.region_recinto %>
+</p>
+
+<p>
+  <strong>Pais recinto:</strong>
+  <%= @recinto.pais_recinto %>
+</p>
+
+<p>
+  <strong>Ubicacion recinto:</strong>
+  <%= @recinto.ubicacion_recinto %>
+</p>
+
+<%= link_to 'Edit', edit_recinto_path(@recinto) %> |
+<%= link_to 'Back', recintos_path %>

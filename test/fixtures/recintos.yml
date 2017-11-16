@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo_recinto: MyString
+  direccion_recinto: MyString
+  numero_recinto: MyString
+  comuna_recinto: MyString
+  ciudad_recinto: MyString
+  region_recinto: MyString
+  pais_recinto: MyString
+  ubicacion_recinto: MyString
+
+two:
+  tipo_recinto: MyString
+  direccion_recinto: MyString
+  numero_recinto: MyString
+  comuna_recinto: MyString
+  ciudad_recinto: MyString
+  region_recinto: MyString
+  pais_recinto: MyString
+  ubicacion_recinto: MyString

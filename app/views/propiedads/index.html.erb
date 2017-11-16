@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Propiedads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id recinto</th>
+      <th>Direccion</th>
+      <th>Numero</th>
+      <th>Departamento</th>
+      <th>Rol</th>
+      <th>Mt</th>
+      <th>Coeficiente</th>
+      <th>Tipo propiedad</th>
+      <th>Torre</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @propiedads.each do |propiedad| %>
+      <tr>
+        <td><%= propiedad.id_recinto %></td>
+        <td><%= propiedad.direccion %></td>
+        <td><%= propiedad.numero %></td>
+        <td><%= propiedad.departamento %></td>
+        <td><%= propiedad.rol %></td>
+        <td><%= propiedad.mt %></td>
+        <td><%= propiedad.coeficiente %></td>
+        <td><%= propiedad.tipo_propiedad %></td>
+        <td><%= propiedad.torre %></td>
+        <td><%= propiedad.user %></td>
+        <td><%= link_to 'Show', propiedad %></td>
+        <td><%= link_to 'Edit', edit_propiedad_path(propiedad) %></td>
+        <td><%= link_to 'Destroy', propiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Propiedad', new_propiedad_path %>

@@ -1,0 +1,57 @@
+<%= form_with(model: recinto, local: true) do |form| %>
+  <% if recinto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recinto.errors.count, "error") %> prohibited this recinto from being saved:</h2>
+
+      <ul>
+      <% recinto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tipo_recinto %>
+    <%= form.text_field :tipo_recinto, id: :recinto_tipo_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion_recinto %>
+    <%= form.text_field :direccion_recinto, id: :recinto_direccion_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_recinto %>
+    <%= form.text_field :numero_recinto, id: :recinto_numero_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comuna_recinto %>
+    <%= form.text_field :comuna_recinto, id: :recinto_comuna_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ciudad_recinto %>
+    <%= form.text_field :ciudad_recinto, id: :recinto_ciudad_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region_recinto %>
+    <%= form.text_field :region_recinto, id: :recinto_region_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais_recinto %>
+    <%= form.text_field :pais_recinto, id: :recinto_pais_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ubicacion_recinto %>
+    <%= form.text_field :ubicacion_recinto, id: :recinto_ubicacion_recinto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

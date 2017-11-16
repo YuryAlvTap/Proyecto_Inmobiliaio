@@ -1,0 +1,67 @@
+<%= form_with(model: propiedad, local: true) do |form| %>
+  <% if propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(propiedad.errors.count, "error") %> prohibited this propiedad from being saved:</h2>
+
+      <ul>
+      <% propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_recinto %>
+    <%= form.number_field :id_recinto, id: :propiedad_id_recinto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion, id: :propiedad_direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero, id: :propiedad_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :departamento %>
+    <%= form.text_field :departamento, id: :propiedad_departamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rol %>
+    <%= form.text_field :rol, id: :propiedad_rol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mt %>
+    <%= form.text_field :mt, id: :propiedad_mt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coeficiente %>
+    <%= form.text_field :coeficiente, id: :propiedad_coeficiente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_propiedad %>
+    <%= form.text_field :tipo_propiedad, id: :propiedad_tipo_propiedad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :torre %>
+    <%= form.text_field :torre, id: :propiedad_torre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :propiedad_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
