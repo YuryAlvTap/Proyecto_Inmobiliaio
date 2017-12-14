@@ -1,16 +1,18 @@
 class PropiedadsController < ApplicationController
-  before_action :set_propiedad, only: [:show, :edit, :update, :destroy]
+  # before_action :set_propiedad, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
   before_action :authenticate_user!
 
   # GET /propiedads
   # GET /propiedads.json
   def index
-    @propiedads = Propiedad.all
+    @propiedads = Propiedad.where(user: current_user)
   end
 
   # GET /propiedads/1
   # GET /propiedads/1.json
   def show
+    #@propiedad = Propiedad.find(propiedad_params[:id])
   end
 
   # GET /propiedads/new
@@ -18,7 +20,10 @@ class PropiedadsController < ApplicationController
     @propiedad = Propiedad.new
   end
 
-  # GET /propiedads/1/edit
+  #     # # Use callbacks to share common setup or constraints between actions.
+    # def set_propiedad
+    #   @propiedad = Propiedad.find(params[:id])
+    # endGET /propiedads/1/edit
   def edit
   end
 
@@ -29,7 +34,7 @@ class PropiedadsController < ApplicationController
     @propiedad.user = current_user
     respond_to do |format|
       if @propiedad.save
-        format.html { redirect_to @propiedad, notice: 'Propiedad was successfully created.' }
+        format.html { redirect_to @propiedad.recinto, notice: 'Propiedad was successfully created.' }
         format.json { render :show, status: :created, location: @propiedad }
       else
         format.html { render :new }
@@ -53,7 +58,7 @@ class PropiedadsController < ApplicationController
   end
 
   # DELETE /propiedads/1
-  # DELETE /propiedads/1.json
+  # DELETE /propiedads/1.jsonrecinto 6
   def destroy
     @propiedad.destroy
     respond_to do |format|
@@ -63,13 +68,13 @@ class PropiedadsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_propiedad
-      @propiedad = Propiedad.find(params[:id])
-    end
+    # # Use callbacks to share common setup or constraints between actions.
+    # def set_propiedad
+    #   @propiedad = Propiedad.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def propiedad_params
-      params.require(:propiedad).permit(:id_recinto, :direccion, :numero, :departamento, :rol, :mt, :coeficiente, :tipo_propiedad, :torre, :user_id)
+      params.require(:propiedad).permit(:recinto_id, :id_recinto, :direccion, :numero, :departamento, :rol, :mt, :coeficiente, :tipo_propiedad, :torre, :user_id)
     end
 end

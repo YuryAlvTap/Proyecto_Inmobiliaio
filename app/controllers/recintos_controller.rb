@@ -1,5 +1,7 @@
 class RecintosController < ApplicationController
-  before_action :set_recinto, only: [:show, :edit, :update, :destroy]
+  #before_action :set_recinto, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+  before_action :authenticate_user!
 
   # GET /recintos
   # GET /recintos.json
@@ -11,6 +13,10 @@ class RecintosController < ApplicationController
   # GET /recintos/1.json
   def show
   end
+
+  # #crea propiedades
+  # def crea_propiedad
+  # end
 
   # GET /recintos/new
   def new
@@ -62,13 +68,13 @@ class RecintosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_recinto
-      @recinto = Recinto.find(params[:id])
-    end
+    # # Use callbacks to share common setup or constraints between actions.
+    # def set_recinto
+    #   @recinto = Recinto.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recinto_params
-      params.require(:recinto).permit(:tipo_recinto, :direccion_recinto, :numero_recinto, :comuna_recinto, :ciudad_recinto, :region_recinto, :pais_recinto, :ubicacion_recinto)
+      params.require(:recinto).permit(:nombre, :tipo_propiedad_id, :direccion_recinto, :numero_recinto, :comuna_recinto, :ciudad_recinto, :region_recinto, :pais_recinto, :ubicacion_recinto)
     end
 end

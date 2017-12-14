@@ -1,35 +1,75 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h4>Registro de usuario</h4>
-  </div>
-  <div class="panel-body">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-
-      <div class="field form-group">
-        <%= f.label :Correo_electrónico %><br />
-        <%= f.email_field :email, autofocus: true,class: 'form-control' %>
-      </div>
-
-      <div class="field form-group">
-        <%= f.label :Contraseña %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> Caracteres mínimo)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off",class: 'form-control' %>
-      </div>
-
-      <div class="field form-group">
-        <%= f.label :Confirmar_contraseña %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Registrar", class: 'btn btn-primary' %>
-      </div>
-    <% end %>
-  </div>
-  <div class="panel-footer">
-    <%= render "devise/shared/links" %>
-  </div>
+<!-- nueva registracion -->
+<div class="container mt-0">
+  <div class="row">
+    <div class="col-md-4"></div>
+      <div class="col-md-4 login-form">
+            <a  class="navbar-brand" href="<%= root_path %>">
+            <%= image_tag "Loan-against-Property.png", with: "30", height: "30", class: "d-inline-block align-top" %> ADMPROP</a>
+            <div class="panel-heading">
+              <h5 class="panel-title">Registrar Usuario</h5>
+            </div>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <%= devise_error_messages! %>
+                    <div class="field form-group">
+                      <%= f.label :Correo_electrónico %><br />
+                      <%= f.email_field :email, autofocus: true,class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                        <%= f.label :Contraseña %>
+                        <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> Caracteres mínimo)</em>
+                        <% end %><br />
+                        <%= f.password_field :password, autocomplete: "off",class: 'form-control' %>
+                      </div>
+                    <div class="field form-group">
+                      <%= f.label :Confirmar_contraseña %><br />
+                      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+                    </div>
+                    <div  class="field form-group">
+                      <%= f.label :nombre %><br />
+                      <%= f.text_field :nombre, autofocus: false, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :Apellido_paterno %><br />
+                      <%= f.text_field :apellido_paterno, autofocus: false, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :Apellido_Materno %><br /0>
+                      <%= f.text_field :apellido_Materno, autofocus: false, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :Rut %><br />
+                      <%= f.text_field :rut, autofocus: false, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :Celular %><br />
+                      <%= f.text_field :celular, autofocus: false, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :Foto %><br />
+                      <%= f.text_field :foto, autofocus: false, class: 'form-control' %>
+                    </div>
+                    <!--
+                    <div class="field form-group">
+                      <%= f.label :Admin %><br />
+                      <%= f.check_box :admin, autofocus: false, class: 'form-control' %>
+                    </div> -->
+                    <div class="field form-group">
+                      <div><%= f.check_box :admin, {}, true %> <%= f.label :es_admin, "Administrador" %> </div>
+                    </div>
+                    <div class="actions">
+                      <%= f.submit "Registrar", class: "btn btn-lg btn-success btn-block" %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <%= render "devise/shared/links" %>
+              </div>
+          </div>
+          <div class="col-md-4"></div>
+   </div>
 </div>
+<br><br>

@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :id_recinto %>
-    <%= form.number_field :id_recinto, id: :propiedad_id_recinto %>
+    <%= form.label :Recinto %>
+    <%= form.select :recinto_id, Recinto.pluck(:nombre, :id) %>
   </div>
 
   <div class="field">
-    <%= form.label :direccion %>
+    <%= form.label :dirección %>
     <%= form.text_field :direccion, id: :propiedad_direccion %>
   </div>
 
   <div class="field">
-    <%= form.label :numero %>
+    <%= form.label :número %>
     <%= form.text_field :numero, id: :propiedad_numero %>
   </div>
 
@@ -56,10 +56,10 @@
     <%= form.text_field :torre, id: :propiedad_torre %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id, id: :propiedad_user_id %>
-  </div>
+  </div> -->
 
   <div class="actions">
     <%= form.submit %>

@@ -1,0 +1,32 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="<%= root_path %>">
+      <%= image_tag "Loan-against-Property.png", with: "30", height: "30", class: "d-inline-block align-top" %>
+       ADMPROP
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <div class="navbar-nav mr-auto ml-auto text-center">
+        <a class="nav-item nav-link active" href="<%= new_admin_user_path %>">Administración</a>
+        <a class="nav-item nav-link" href="#">Nosotros</a>
+        <a class="nav-item nav-link" href="#">Servicios</a>
+        <a class="nav-item nav-link" href="#">Contacto</a>
+        <% if user_signed_in? %>
+          <a class="nav-item nav-link text-white border-white">Bienvenido: <%= current_user.nombre %></a>
+        <% end %>
+      </div>
+
+      <div class="d-flex flex-row justify-content-center nav-item nav-link">
+            <% if !user_signed_in? %>
+                <%= link_to 'Iniciar Sesión', new_user_session_path, class: 'btn btn-outline-primary mr-2 btn-sm' %>
+                <%= link_to 'Registrarse',  new_user_registration_path, class: 'btn btn-outline-success btn-sm'%>
+              <% else %>
+                <%= link_to 'Editar Usuario', edit_user_registration_path, class: 'btn btn-outline-primary mr-2 btn-sm' %>
+                <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger btn-sm' %>
+            <% end %>
+      </div>
+    </div>
+  </nav>

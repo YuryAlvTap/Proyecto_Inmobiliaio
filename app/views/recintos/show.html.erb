@@ -1,44 +1,92 @@
-<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Tipo recinto:</strong>
-  <%= @recinto.tipo_recinto %>
+  <strong>recinto</strong>
+  <%= @recinto.tipo_propiedad.name %>
+</p
+<p>
+  <strong>nombre</strong>
+  <%= @recinto.nombre %>
 </p>
-
 <p>
-  <strong>Direccion recinto:</strong>
+  <strong>dirección</strong>
   <%= @recinto.direccion_recinto %>
 </p>
-
 <p>
-  <strong>Numero recinto:</strong>
+  <strong>número</strong>
   <%= @recinto.numero_recinto %>
 </p>
-
 <p>
-  <strong>Comuna recinto:</strong>
+  <strong>comuna</strong>
   <%= @recinto.comuna_recinto %>
 </p>
-
 <p>
-  <strong>Ciudad recinto:</strong>
+  <strong>ciudad</strong>
   <%= @recinto.ciudad_recinto %>
 </p>
-
 <p>
-  <strong>Region recinto:</strong>
+  <strong>región</strong>
   <%= @recinto.region_recinto %>
 </p>
-
 <p>
-  <strong>Pais recinto:</strong>
+  <strong>país</strong>
   <%= @recinto.pais_recinto %>
 </p>
 
-<p>
-  <strong>Ubicacion recinto:</strong>
-  <%= @recinto.ubicacion_recinto %>
-</p>
+<% if can?(:create, @recinto) %>
+    <%= form_with(model: [@recinto, Propiedad.new], local: true) do |form| %>
+    <!--  <%= form.hidden_field :id_recinto, value: @recinto.id %> -->
+    <%= form.hidden_field :recinto_id, value: @recinto.id %>
+        <div class="field">
+          <%= form.label :dirección %>
+          <%= form.text_field :direccion, id: :propiedad_direccion %>
+        </div>
 
-<%= link_to 'Edit', edit_recinto_path(@recinto) %> |
-<%= link_to 'Back', recintos_path %>
+        <div class="field">
+          <%= form.label :número %>
+          <%= form.text_field :numero, id: :propiedad_numero %>
+        </div>
+
+        <div class="field">
+          <%= form.label :departamento %>
+          <%= form.text_field :departamento, id: :propiedad_departamento %>
+        </div>
+
+        <div class="field">
+          <%= form.label :rol %>
+          <%= form.text_field :rol, id: :propiedad_rol %>
+        </div>
+
+        <div class="field">
+          <%= form.label :mt %>
+          <%= form.text_field :mt, id: :propiedad_mt %>
+        </div>
+
+        <div class="field">
+          <%= form.label :coeficiente %>
+          <%= form.text_field :coeficiente, id: :propiedad_coeficiente %>
+        </div>
+
+        <div class="field">
+          <%= form.label :tipo_propiedad %>
+          <%= form.text_field :tipo_propiedad, id: :propiedad_tipo_propiedad %>
+        </div>
+
+        <div class="field">
+          <%= form.label :torre %>
+          <%= form.text_field :torre, id: :propiedad_torre %>
+        </div>
+
+        <!-- <div class="field">
+          <%= form.label :user_id %>
+          <%= form.text_field :user_id, id: :propiedad_user_id %>
+        </div> -->
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+      <%= link_to 'Editar', edit_recinto_path(@recinto) %>
+  <% end %>
+
+
+  <%= link_to 'Volver', recintos_path %>

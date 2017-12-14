@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item gasto:</strong>
+  <%= @expense.item_gasto %>
+</p>
+
+<p>
+  <strong>Tipo gasto:</strong>
+  <%= @expense.tipo_gasto %>
+</p>
+
+<p>
+  <strong>Periodo gasto:</strong>
+  <%= @expense.periodo_gasto %>
+</p>
+
+<p>
+  <strong>Tipo gasto:</strong>
+  <%= @expense.tipo_gasto %>
+</p>
+
+<p>
+  <strong>Recinto:</strong>
+  <%= @expense.recinto %>
+</p>
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>

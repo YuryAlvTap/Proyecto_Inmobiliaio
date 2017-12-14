@@ -10,13 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115001041) do
+ActiveRecord::Schema.define(version: 20171208215750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string "namespace"
+    t.text "body"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.string "author_type"
+    t.bigint "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  end
+
+  create_table "admin_users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "item_gasto"
+    t.integer "tipo_gasto" #debe ser nonto
+    t.date "periodo_gasto"
+    t.bigint "tipo_gasto_id"
+    t.bigint "recinto_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recinto_id"], name: "index_expenses_on_recinto_id"
+    t.index ["tipo_gasto_id"], name: "index_expenses_on_tipo_gasto_id"
+  end
+
   create_table "propiedads", force: :cascade do |t|
-    t.integer "id_recinto"
     t.string "direccion"
     t.string "numero"
     t.string "departamento"
@@ -34,7 +76,6 @@ ActiveRecord::Schema.define(version: 20171115001041) do
   end
 
   create_table "recintos", force: :cascade do |t|
-    t.string "tipo_recinto"
     t.string "direccion_recinto"
     t.string "numero_recinto"
     t.string "comuna_recinto"
@@ -42,6 +83,21 @@ ActiveRecord::Schema.define(version: 20171115001041) do
     t.string "region_recinto"
     t.string "pais_recinto"
     t.string "ubicacion_recinto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "tipo_propiedad_id"
+    t.string "nombre"
+    t.index ["tipo_propiedad_id"], name: "index_recintos_on_tipo_propiedad_id"
+  end
+
+  create_table "tipo_gastos", force: :cascade do |t|
+    t.string "descripcion_gasto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tipo_propiedads", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,13 +119,16 @@ ActiveRecord::Schema.define(version: 20171115001041) do
     t.string "rut", default: "", null: false
     t.integer "celular", default: 0, null: false
     t.string "foto", default: ""
-    t.string "perfil", default: "4", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "expenses", "recintos"
+  add_foreign_key "expenses", "tipo_gastos"
   add_foreign_key "propiedads", "recintos"
   add_foreign_key "propiedads", "users"
+  add_foreign_key "recintos", "tipo_propiedads"
 end

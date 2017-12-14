@@ -1,54 +1,42 @@
-<p id="notice"><%= notice %></p>
+ <br>
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><h6><%= @propiedad.recinto.tipo_propiedad.name %></h6></div>
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><h6><%= @propiedad.recinto.nombre %></h6></div>
+  </div>
 
-<p>
-  <strong>Id recinto:</strong>
-  <%= @propiedad.id_recinto %>
-</p>
-
-<p>
-  <strong>Direccion:</strong>
-  <%= @propiedad.direccion %>
-</p>
-
-<p>
-  <strong>Numero:</strong>
-  <%= @propiedad.numero %>
-</p>
-
-<p>
-  <strong>Departamento:</strong>
-  <%= @propiedad.departamento %>
-</p>
-
-<p>
-  <strong>Rol:</strong>
-  <%= @propiedad.rol %>
-</p>
-
-<p>
-  <strong>Mt:</strong>
-  <%= @propiedad.mt %>
-</p>
-
-<p>
-  <strong>Coeficiente:</strong>
-  <%= @propiedad.coeficiente %>
-</p>
-
-<p>
-  <strong>Tipo propiedad:</strong>
-  <%= @propiedad.tipo_propiedad %>
-</p>
-
-<p>
-  <strong>Torre:</strong>
-  <%= @propiedad.torre %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @propiedad.user %>
-</p>
-
-<%= link_to 'Edit', edit_propiedad_path(@propiedad) %> |
-<%= link_to 'Back', propiedads_path %>
+  <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-2 col-xl-2"><class="pull-right"><strong>Dirección:</strong> <%= @propiedad.recinto.direccion_recinto%></div>
+      <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2"><class="pull-right"><strong>Número:</strong> <%= @propiedad.recinto.numero_recinto %></div>
+      <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2"><class="pull-right"><strong>Región:</strong> <%= @propiedad.recinto.region_recinto %></div>
+      <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2"><class="pull-right"><strong>Ciudad:</strong> <%= @propiedad.recinto.ciudad_recinto %></div>
+      <div class="col-sm-6 col-md-2 col-lg-4 col-xl-4"><class="pull-right"><strong>Comuna:</strong> <%= @propiedad.recinto.comuna_recinto %></div>
+  </div>
+ </div>
+ <br>
+ <div class="container">
+    <div class="row">
+      <strong>Propietario:</strong>
+      <%= @propiedad.user.nombre %>
+      <%= @propiedad.user.apellido_paterno %>
+      <%= @propiedad.user.apellido_Materno %>
+    </div>
+ </div>
+ <br>
+ <div class="container">
+      <div class="row">
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Dirección:</strong><%= @propiedad.direccion %></div>
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Número:</strong><%= @propiedad.numero %></div></p>
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Departamento:</strong><%= @propiedad.departamento %></div></p>
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Rol:</strong><%= @propiedad.rol %></div></p>
+      </div>
+      <div class="row">
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Mt:</strong><%= @propiedad.mt %></div></p>
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Coeficiente:</strong><%= @propiedad.coeficiente %></div></p>
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Tipo propiedad:</strong><%= @propiedad.tipo_propiedad %></div></p>
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Torre:</strong><%= @propiedad.torre %></div></p>
+      </div>
+ </div>
+ <br>
+<%= link_to 'Editar', edit_propiedad_path(@propiedad), class:'btn btn-outline-primary btn-sm' %> |
+<%= link_to 'Volver', propiedads_path , class:'btn btn-outline-primary btn-sm' %>

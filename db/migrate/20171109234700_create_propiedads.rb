@@ -1,7 +1,6 @@
 class CreatePropiedads < ActiveRecord::Migration[5.1]
   def change
     create_table :propiedads do |t|
-      t.integer :id_recinto
       t.string :direccion
       t.string :numero
       t.string :departamento

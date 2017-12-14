@@ -1,0 +1,42 @@
+<%= form_with(model: expense, local: true) do |form| %>
+  <% if expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+
+      <ul>
+      <% expense.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :item_gasto %>
+    <%= form.text_field :item_gasto, id: :expense_item_gasto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_gasto %>
+    <%= form.number_field :tipo_gasto, id: :expense_tipo_gasto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periodo_gasto %>
+    <%= form.date_select :periodo_gasto, id: :expense_periodo_gasto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_gasto_id %>
+    <%= form.text_field :tipo_gasto_id, id: :expense_tipo_gasto_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recinto_id %>
+    <%= form.text_field :recinto_id, id: :expense_recinto_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

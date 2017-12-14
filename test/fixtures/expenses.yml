@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_gasto: MyString
+  tipo_gasto: 1
+  periodo_gasto: 2017-12-08
+  tipo_gasto: one
+  recinto: one
+
+two:
+  item_gasto: MyString
+  tipo_gasto: 1
+  periodo_gasto: 2017-12-08
+  tipo_gasto: two
+  recinto: two

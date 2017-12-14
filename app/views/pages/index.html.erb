@@ -1,0 +1,49 @@
+
+<!-- Inicio Cards -->
+<div class="container mt-4">
+  <div class="card-deck">
+      <!-- Inicio Cards1 -->
+      <div class="card">
+        <img class="card-img-top img-fluid" src="/assets/propiedades1.jpg" alt="">
+        <div class="text-center">
+            <img src="/assets/card_propiedades.jpg" alt="" class="img-fluid misimg rounded-circle" height="100px" width="100px">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Recintos</h4>
+          <p class="card-text">Sección en donde puedes ver tus recintos y sus propiedades.</p>
+        </div>
+        <div class="card-footer text-center">
+             <%= link_to 'Ir a Recintos...', recintos_path, class: 'btn btn-outline-primary mr-2 btn-sm' %>
+        </div>
+      </div>
+      <!-- Inicio Cards2 -->
+      <div class="card">
+        <img class="card-img-top img-fluid" src="/assets/propiedades1.jpg" alt="">
+        <div class="text-center">
+            <img src="/assets/card_propiedades.jpg" alt="" class="img-fluid misimg  rounded-circle" height="100px" width="100px">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Propiedades</h4>
+          <p class="card-text">Sección donde puedes acceder a las propiedades que tienes a tu nombre.</p>
+        </div>
+        <div class="card-footer text-center">
+             <%= link_to 'Ir a Propiedades...', propiedads_path, class: 'btn btn-outline-primary mr-2 btn-sm' %>
+        </div>
+      </div>
+      <!-- Inicio Cards3 -->
+      <div class="card">
+        <img class="card-img-top img-fluid" src="/assets/propiedades1.jpg" alt="">
+        <div class="text-center">
+            <img src="/assets/card_propiedades.jpg" alt="" class="img-fluid misimg rounded-circle" height="100px" width="100px">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Gastos</h4>
+          <p class="card-text">Sección con el detalle de los cobros y pagos de cada propiedad que tengas.</p>
+        </div>
+        <div class="card-footer text-center">
+             <%= link_to 'Ir a Gastos...', new_user_session_path, class: 'btn btn-outline-primary mr-2 btn-sm' %>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Fin Cards -->

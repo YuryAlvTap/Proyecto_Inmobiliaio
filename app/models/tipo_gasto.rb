@@ -1,0 +1,2 @@
+class TipoGasto < ApplicationRecord
+end

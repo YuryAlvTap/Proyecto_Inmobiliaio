@@ -12,42 +12,47 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :tipo_recinto %>
-    <%= form.text_field :tipo_recinto, id: :recinto_tipo_recinto %>
+    <%= form.label :Recinto %>
+    <%= form.select :tipo_propiedad_id, TipoPropiedad.pluck(:name, :id) %>
   </div>
 
   <div class="field">
-    <%= form.label :direccion_recinto %>
+    <%= form.label :Nombre %>
+    <%= form.text_field :nombre, id: :recinto_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dirección %>
     <%= form.text_field :direccion_recinto, id: :recinto_direccion_recinto %>
   </div>
 
   <div class="field">
-    <%= form.label :numero_recinto %>
+    <%= form.label :número %>
     <%= form.text_field :numero_recinto, id: :recinto_numero_recinto %>
   </div>
 
   <div class="field">
-    <%= form.label :comuna_recinto %>
+    <%= form.label :comuna %>
     <%= form.text_field :comuna_recinto, id: :recinto_comuna_recinto %>
   </div>
 
   <div class="field">
-    <%= form.label :ciudad_recinto %>
+    <%= form.label :ciudad %>
     <%= form.text_field :ciudad_recinto, id: :recinto_ciudad_recinto %>
   </div>
 
   <div class="field">
-    <%= form.label :region_recinto %>
+    <%= form.label :región %>
     <%= form.text_field :region_recinto, id: :recinto_region_recinto %>
   </div>
 
   <div class="field">
-    <%= form.label :pais_recinto %>
+    <%= form.label :país %>
     <%= form.text_field :pais_recinto, id: :recinto_pais_recinto %>
   </div>
 
   <div class="field">
-    <%= form.label :ubicacion_recinto %>
+    <%= form.label :ubicación %>
     <%= form.text_field :ubicacion_recinto, id: :recinto_ubicacion_recinto %>
   </div>
 

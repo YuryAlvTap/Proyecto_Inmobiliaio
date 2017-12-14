@@ -1,0 +1,22 @@
+<%= form_with(model: tipo_gasto, local: true) do |form| %>
+  <% if tipo_gasto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipo_gasto.errors.count, "error") %> prohibited this tipo_gasto from being saved:</h2>
+
+      <ul>
+      <% tipo_gasto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descripcion_gasto %>
+    <%= form.text_field :descripcion_gasto, id: :tipo_gasto_descripcion_gasto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

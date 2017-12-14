@@ -1,0 +1,89 @@
+
+<p>
+  <strong>recinto12</strong>
+  <%= @recinto.tipo_propiedad.name %>
+</p
+<p>
+  <strong>nombre</strong>
+  <%= @recinto.nombre %>
+</p>
+<p>
+  <strong>dirección</strong>
+  <%= @recinto.direccion_recinto %>
+</p>
+<p>
+  <strong>número</strong>
+  <%= @recinto.numero_recinto %>
+</p>
+<p>
+  <strong>comuna</strong>
+  <%= @recinto.comuna_recinto %>
+</p>
+<p>
+  <strong>ciudad</strong>
+  <%= @recinto.ciudad_recinto %>
+</p>
+<p>
+  <strong>región</strong>
+  <%= @recinto.region_recinto %>
+</p>
+<p>
+  <strong>país</strong>
+  <%= @recinto.pais_recinto %>
+</p>
+
+<%= form_with(model: [@recinto, Propiedad.new], local: true) do |form| %>
+<!--  <%= form.hidden_field :id_recinto, value: @recinto.id %> -->
+<%= form.hidden_field :recinto_id, value: @recinto.id %>
+    <div class="field">
+      <%= form.label :dirección %>
+      <%= form.text_field :direccion, id: :propiedad_direccion %>
+    </div>
+
+    <div class="field">
+      <%= form.label :número %>
+      <%= form.text_field :numero, id: :propiedad_numero %>
+    </div>
+
+    <div class="field">
+      <%= form.label :departamento %>
+      <%= form.text_field :departamento, id: :propiedad_departamento %>
+    </div>
+
+    <div class="field">
+      <%= form.label :rol %>
+      <%= form.text_field :rol, id: :propiedad_rol %>
+    </div>
+
+    <div class="field">
+      <%= form.label :mt %>
+      <%= form.text_field :mt, id: :propiedad_mt %>
+    </div>
+
+    <div class="field">
+      <%= form.label :coeficiente %>
+      <%= form.text_field :coeficiente, id: :propiedad_coeficiente %>
+    </div>
+
+    <div class="field">
+      <%= form.label :tipo_propiedad %>
+      <%= form.text_field :tipo_propiedad, id: :propiedad_tipo_propiedad %>
+    </div>
+
+    <div class="field">
+      <%= form.label :torre %>
+      <%= form.text_field :torre, id: :propiedad_torre %>
+    </div>
+
+    <!-- <div class="field">
+      <%= form.label :user_id %>
+      <%= form.text_field :user_id, id: :propiedad_user_id %>
+    </div> -->
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Editar', edit_recinto_path(@recinto) %>
+  <%= link_to 'Volver', recintos_path %>

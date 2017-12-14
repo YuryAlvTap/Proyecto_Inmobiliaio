@@ -4,5 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-has_many :propiedads
+  # valida que el nombre sea obligatorio
+  validates :nombre, presence: true
+  #validates :username, presence: true, uniqueness: true
+  has_many :propiedads
+  has_many :recintos, through: :propiedads
 end
