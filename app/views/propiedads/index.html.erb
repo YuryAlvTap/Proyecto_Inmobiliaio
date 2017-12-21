@@ -1,4 +1,3 @@
-
 <br>
 <h5>Propiedades</h5>
 <div class="table-responsive">
@@ -16,7 +15,6 @@
         <th class="text-right">Torre</th>
         <th colspan="3"></th>
       </tr>
-
     </thead>
     <tbody>
       <% @propiedads.each do |propiedad| %>
@@ -43,4 +41,6 @@
   </table>
 </div>
 <br>
+<% if can?(:create, @propiedad) %>
 <%= link_to 'Nueva Propiedad', new_propiedad_path, class:'btn btn-outline-primary btn-sm' %>
+<% end %>

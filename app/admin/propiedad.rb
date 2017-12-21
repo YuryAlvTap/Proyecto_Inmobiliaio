@@ -30,8 +30,10 @@ ActiveAdmin.register Propiedad do
 permit_params :direccion, :numero, :departamento, :rol, :mt, :coeficiente, :tipo_propiedad, :torre, :user_id, :created_at, :updated_at, :recinto_id
 
 index do
-
-  column "Tipo_propiedad" do |rec|
+  column "Propietario" do |prop|
+    prop.user.nombre
+  end
+  column "Tipo_recinto" do |rec|
     rec.recinto.tipo_propiedad
   end
   column "Nombre_Recinto" do |rec|
@@ -45,9 +47,6 @@ index do
   column :coeficiente
   column :tipo_propiedad
   column :torre
-  column "User" do |prop|
-    prop.user.nombre
-  end
   column :created_at
   column :updated_at
 
@@ -56,7 +55,9 @@ end
 
 #crea el formulario para ingresar propiedad new
 form do |f|
-  inputs 'agregando un nueva propiedad' do
+  inputs 'Agregando/Modificando una propiedad' do
+    input :user_id, :label => 'Propietario', :as => :select, :collection => User.all.map{|u| ["#{u.nombre}", u.id]}
+    input :recinto_id, :label => 'Recinto', :as => :select, :collection => Recinto.all.map{|u| ["#{u.nombre}", u.id]}
     input :direccion
     input :numero
     input :departamento
@@ -65,8 +66,6 @@ form do |f|
     input :tipo_propiedad
     input :torre
     # input :user_id, :label => 'Usuario', :as => :select, :collection => User.all.map{|u| ["#{u.nombre}, #{u.apellido_paterno}", u.id]}
-    input :user_id, :label => 'Usuario', :as => :select, :collection => User.all.map{|u| ["#{u.nombre}", u.id]}
-    input :recinto_id, :label => 'Recinto', :as => :select, :collection => Recinto.all.map{|u| ["#{u.nombre}", u.id]}
   end
   actions
 end

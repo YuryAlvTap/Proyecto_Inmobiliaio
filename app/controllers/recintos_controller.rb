@@ -1,12 +1,12 @@
 class RecintosController < ApplicationController
   #before_action :set_recinto, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
-  before_action :authenticate_user!
+   before_action :authenticate_user!
 
   # GET /recintos
   # GET /recintos.json
   def index
-    @recintos = Recinto.all
+      Recinto.all
   end
 
   # GET /recintos/1

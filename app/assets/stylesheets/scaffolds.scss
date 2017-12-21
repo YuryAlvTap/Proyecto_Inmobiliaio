@@ -82,3 +82,40 @@ div {
 label {
   display: block;
 }
+
+
+#--------------------------
+
+.descripcion{
+  color: #373a50;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: left;
+  float: left;
+}
+
+.container_final_izq {
+  box-sizing: border-box;
+  display: block;
+  overflow: visible;
+  text-align: justify;
+  height: 200px;
+  width: 50%;
+  margin-top: 10px;
+  font-size: 12px;}
+
+.container_final_der {
+  box-sizing: border-box;
+  text-align: justify;
+  height: 200px;
+  width: 50%;
+  margin-top: 10px;
+  font-size: 12px; }
+
+
+
+.container1{
+    border-top: 1px solid #5882FA;
+    border-bottom: 1px solid #5882FA;
+}

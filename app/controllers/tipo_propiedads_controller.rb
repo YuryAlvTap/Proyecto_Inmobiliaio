@@ -1,7 +1,7 @@
 class TipoPropiedadsController < ApplicationController
   #before_action :set_tipo_propiedad, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
-  before_action :authenticate_user!
+   before_action :authenticate_user!
 
   # GET /tipo_propiedads
   # GET /tipo_propiedads.json

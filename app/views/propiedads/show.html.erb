@@ -1,4 +1,6 @@
  <br>
+<h6><strong>Datos de tu Propiedad</strong></h6>
+ <br>
 <div class="container">
   <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><h6><%= @propiedad.recinto.tipo_propiedad.name %></h6></div>
@@ -31,12 +33,15 @@
                 <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Rol:</strong><%= @propiedad.rol %></div></p>
       </div>
       <div class="row">
-                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Mt:</strong><%= @propiedad.mt %></div></p>
+                <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Mts Cuadrados:</strong><%= @propiedad.mt %></div></p>
                 <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Coeficiente:</strong><%= @propiedad.coeficiente %></div></p>
                 <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Tipo propiedad:</strong><%= @propiedad.tipo_propiedad %></div></p>
                 <p><div class="col-sm-6 col-md-3 col-lg-3 col-xl-2"><strong>Torre:</strong><%= @propiedad.torre %></div></p>
       </div>
  </div>
  <br>
+<% if can?(:edit, @propiedad) %>
 <%= link_to 'Editar', edit_propiedad_path(@propiedad), class:'btn btn-outline-primary btn-sm' %> |
+<% end %>
 <%= link_to 'Volver', propiedads_path , class:'btn btn-outline-primary btn-sm' %>
+ <br><br>

@@ -1,5 +1,21 @@
+<br>
+<div class="container">
+ <div class="row">
+     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><h6><%= @recinto.pais_recinto %></h6></div>
+     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><h6><%= @recinto.tipo_propiedad.name %></h6></div>
+     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><h6><%= @recinto.nombre %></h6></div>
+ </div>
 
-<p>
+ <div class="row">
+     <div class="col-sm-12 col-md-4 col-lg-2 col-xl-2"><class="pull-right"><strong>Dirección:</strong> <%= @recinto.direccion_recinto%></div>
+     <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2"><class="pull-right"><strong>Número:</strong> <%= @recinto.numero_recinto  %></div>
+     <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2"><class="pull-right"><strong>Región:</strong> <%= @recinto.region_recinto %></div>
+     <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2"><class="pull-right"><strong>Ciudad:</strong> <%= @recinto.ciudad_recinto %></div>
+     <div class="col-sm-6 col-md-2 col-lg-4 col-xl-4"><class="pull-right"><strong>Comuna:</strong> <%= @recinto.comuna_recinto %></div>
+ </div>
+</div>
+<br>
+<!-- <p>
   <strong>recinto</strong>
   <%= @recinto.tipo_propiedad.name %>
 </p
@@ -30,7 +46,7 @@
 <p>
   <strong>país</strong>
   <%= @recinto.pais_recinto %>
-</p>
+</p> -->
 
 <% if can?(:create, @recinto) %>
     <%= form_with(model: [@recinto, Propiedad.new], local: true) do |form| %>
@@ -85,8 +101,10 @@
           <%= form.submit %>
         </div>
       <% end %>
-      <%= link_to 'Editar', edit_recinto_path(@recinto) %>
+      <%= link_to 'Editar', edit_recinto_path(@recinto), class:'btn btn-outline-primary btn-sm' %>
+       <br> <br>
   <% end %>
 
 
-  <%= link_to 'Volver', recintos_path %>
+  <%= link_to 'Volver', recintos_path, class:'btn btn-outline-primary btn-sm' %>
+   <br> <br>
