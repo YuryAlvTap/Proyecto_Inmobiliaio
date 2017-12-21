@@ -226,7 +226,7 @@ ActiveAdmin.setup do |config|
 
     config.namespace :admin do |admin|
       admin.build_menu :default do |menu|
-        menu.add label: "AdmProp", url: "http://localhost:3000", html_options: { target: :blank }
+        menu.add label: "AdmProp", url: "https://mysterious-mountain-86307.herokuapp.com", html_options: { target: :blank }
       end
     end
 
