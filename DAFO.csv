@@ -1,0 +1,79 @@
+Dimension,Propuesta de Valor,Valor,Fortalezas,Debilidades
+"Propuesta de Valor,Pregunta 1 - Propuesta de Valor [La propuestas de valor esta en consonancia con las necesidades de los clientes],4,""3,5"",0"
+"Propuesta de Valor,Pregunta 1 - Propuesta de Valor [La propuesta de valor y las necesidades de los clientes no estan en consonancia],0,""3,5"",0"
+"Propuesta de Valor,Pregunta 2 - Propuesta de Valor [La propuesta de valor tienen un potente efecto de red],2,""3,5"",0"
+"Propuesta de Valor,Pregunta 2 - Propuesta de Valor [La propuesta de valor no tiene un potente efecto de red],0,""3,5"",0"
+"Propuesta de Valor,Pregunta 3 - Propuesta de Valor [Hay fuertes sinergias entre nuestros productos y servicios],4,""3,5"",0"
+"Propuesta de Valor,Pregunta 3 - Propuesta de Valor [No hay sinergias entre nuestros productos y servicios],0,""3,5"",0"
+"Propuesta de Valor,Pregunta 4 - Propuesta de Valor [Nuestras clientes estan muy satisfechos],4,""3,5"",0"
+"Propuesta de Valor,Pregunta 4 - Propuesta de Valor [Recibimos quejas con frecuencia],0,""3,5"",0"
+"Flujos de Ingreso,Pregunta 1 - Modelo Ingresos y Costos [Tenemos margenes netos elevados],4,2,""1,5"""
+"Flujos de Ingreso,Pregunta 1 - Modelo Ingresos y Costos [Nuestros margenes netos son reducidos],0,2,""1,5"""
+"Flujos de Ingreso,Pregunta 2 - Modelo Ingresos y Costos [Nuestros ingresos son predecibles],0,2,""1,5"""
+"Flujos de Ingreso,Pregunta 2 - Modelo Ingresos y Costos [Nuestros ingresos son impredecibles],4,2,""1,5"""
+"Flujos de Ingreso,Pregunta 3 - Modelo Ingresos y Costos [Tenemos fuentes de ingresos recurrentes y compras repetidas frecuentes],0,2,""1,5"""
+"Flujos de Ingreso,Pregunta 3 - Modelo Ingresos y Costos [Nuestros ingresos son transaccionales y tenemos pocas compras repetidas],4,2,""1,5"""
+"Flujos de Ingreso,Pregunta 4 - Modelo Ingresos y Costos [Tenemos fuentes de ingresos diversificadas],3,2,""1,5"""
+"Flujos de Ingreso,Pregunta 4 - Modelo Ingresos y Costos [Dependemos de una sola fuente de ingresos],0,2,""1,5"""
+"Flujos de Ingreso,Pregunta 5 - Modelo Ingresos y Costos [Nuestras fuentes de ingresos son sostenibles],2,2,""1,5"""
+"Flujos de Ingreso,Pregunta 5 - Modelo Ingresos y Costos [La sostenibilidad de nuestros ingresos es cuestionable],0,2,""1,5"""
+"Flujos de Ingreso,Pregunta 6 - Modelo Ingresos y Costos [Percibimos ingresos antes de incurrir en gastos],0,2,""1,5"""
+"Flujos de Ingreso,Pregunta 6 - Modelo Ingresos y Costos [Tenemos que incurrir en muchos gastos antes de percibir ingresos],4,2,""1,5"""
+"Flujos de Ingreso,Pregunta 7 - Costes e ingresos [Cobramos a nuestros clientes por lo que estan dispuestos en pagar],3,2,""1,5"""
+"Flujos de Ingreso,Pregunta 7 - Costes e ingresos [No cobramos a los clientes cosas por la que estan dispuestos a pagar],0,2,""1,5"""
+"Flujos de Ingreso,Pregunta 8 - Costes e ingresos [Nuestros mecanismos de fijacion de precios incluyen todas las oportunidades de ingresos],4,2,""1,5"""
+"Flujos de Ingreso,Pregunta 8 - Costes e ingresos [Nuestros mecanismos de fijacion dejan dinero sobre la mesa],0,2,""1,5"""
+Estructura de costos,Pregunta 9 - Costes e ingresos [Nuestros costes son predecibles],0,2,1
+Estructura de costos,Pregunta 9 - Costes e ingresos [Nuestros costes son impredecibles],4,2,1
+Estructura de costos,Pregunta 10 - Costes e ingresos [Nuestra estructura de costes se adecua perfectamente a nuestro modelo de negocio],3,2,1
+Estructura de costos,Pregunta 10 - Costes e ingresos [Nuestra estructura de costes y nuestro modelo de negocio no están en consonancia],0,2,1
+Estructura de costos,Pregunta 11 - Costes e ingresos [Nuestras operaciones son rentables],4,2,1
+Estructura de costos,Pregunta 11 - Costes e ingresos [Nuestras operaciones no so rentables],0,2,1
+Estructura de costos,Pregunta 12 - Costes e ingresos [Aprovechamos las economias de escala],1,2,1
+Estructura de costos,Pregunta 12 - Costes e ingresos [No aprovechamos las economias de escala],0,2,1
+"Recursos clave,Pregunta 1 - Infraestructura [La competencia no puede imitar facilmente nuestros recursos claves],0,""1,666666667"",""1,666666667"""
+"Recursos clave,Pregunta 1 - Infraestructura [Nuestros recursos clave se pueden imitar facilmente],5,""1,666666667"",""1,666666667"""
+"Recursos clave,Pregunta 2 - Infraestructura [Las necesidades de recursos son predecibles],3,""1,666666667"",""1,666666667"""
+"Recursos clave,Pregunta 2 - Infraestructura [Las necesidades de recursos no son predecibles],0,""1,666666667"",""1,666666667"""
+"Recursos clave,Pregunta 3 - Infraestructura [Aplicamos los recursos clave en la cantidad adecuada y en el momento adecuado],2,""1,666666667"",""1,666666667"""
+"Recursos clave,Pregunta 3 - Infraestructura [Tenemos problemas para aplicar los recursos adecuados en el momento adecuado],0,""1,666666667"",""1,666666667"""
+"Actividades claves,Pregunta 4 - Infraestructura [Realizamos nuestras actividades clave de forma eficiente],1,""2,5"",0"
+"Actividades claves,Pregunta 4 - Infraestructura [Realizamos nuestras actividades clave de forma ineficiente],0,""2,5"",0"
+"Actividades claves,Pregunta 5 - Infraestructura [Nuestras actividades clave son dificiles de copiar],4,""2,5"",0"
+"Actividades claves,Pregunta 5 - Infraestructura [Nuestras actividades clave son faciles de copiar],0,""2,5"",0"
+"Actividades claves,Pregunta 6 - Infraestructura [La ejecucion es de alta calidad],4,""2,5"",0"
+"Actividades claves,Pregunta 6 - Infraestructura [La ejecucion es de baja calidad],0,""2,5"",0"
+"Actividades claves,Pregunta 7 - Infraestructura [El equilibrio entre trabajo interno y colaboracion externa es ideal],1,""2,5"",0"
+"Actividades claves,Pregunta 7 - Infraestructura [Realizamos muchas o muy pocas actividades internamente],0,""2,5"",0"
+"Aliados/Partners clave,Pregunta 8 - Infraestructura [Estamos especializados y trabajamos con socios cuando es necesario],5,""4,5"",0"
+"Aliados/Partners clave,Pregunta 8 - Infraestructura [No estamos especializados ni colaboramos con socios lo suficiente],0,""4,5"",0"
+"Aliados/Partners clave,Pregunta 9 - Infraestructura [Tenemos buenas relaciones profesionales con los socios clave],4,""4,5"",0"
+"Aliados/Partners clave,Pregunta 9 - Infraestructura [Las relaciones profesionales con los socios clave son conflictivas],0,""4,5"",0"
+Segmentos de Cliente,Pregunta 1 - Interaccion con los clientes [El indice de migracion de clientes es bajo],4,3,0
+Segmentos de Cliente,Pregunta 1 - Interaccion con los clientes [El indice de migracion de clientes es elevado],0,3,0
+Segmentos de Cliente,Pregunta 2 - Interaccion con los clientes [La cartera de clientes esta bien segmentada],4,3,0
+Segmentos de Cliente,Pregunta 2 - Interaccion con los clientes [La cartera de clientes no esta segmentada],0,3,0
+Segmentos de Cliente,Pregunta 3 - Interaccion con los clientes [Captamos nuevos clientes constantemente],1,3,0
+Segmentos de Cliente,Pregunta 3 - Interaccion con los clientes [No captamos nuevos clientes],0,3,0
+Canales,Pregunta 4 - Interaccion con los clientes [Nuestros canales son muy eficientes],1,2,0
+Canales,Pregunta 4 - Interaccion con los clientes [Nuestros canales son ineficientes],0,2,0
+Canales,Pregunta 5 - Interaccion con los clientes [Nuestros canales son muy eficaces],2,2,0
+Canales,Pregunta 5 - Interaccion con los clientes [Nuestros canales son ineficientes],0,2,0
+Canales,Pregunta 6 - Interaccion con los clientes [Los canales establecen un contacto estrecho con los clientes],4,2,0
+Canales,Pregunta 6 - Interaccion con los clientes [Los canales no establecen un contacto adecuado con los clientes potenciales],0,2,0
+Canales,Pregunta 7 - Interaccion con los clientes [Los clientes pueden acceder facilmente a nuestros canales],3,2,0
+Canales,Pregunta 7 - Interaccion con los clientes [Nuestros canales no llegan a los clientes potenciales],0,2,0
+Canales,Pregunta 8 - Interaccion con los clientes [Los canales se adecuan a los segmentos de mercado],1,2,0
+Canales,Pregunta 8 - Interaccion con los clientes [Los canales no se adecuan a los segmentos de mercado],0,2,0
+Canales,Pregunta 9 - Interaccion con los clientes [Los canales estan perfectamente integrados],1,2,0
+Canales,Pregunta 9 - Interaccion con los clientes [Los canales no estan bien integrados],0,2,0
+Canales,Pregunta 10 - Interaccion con los clientes [Los canales se adecuan a los segmentos de mercado],2,2,0
+Canales,Pregunta 10 - Interaccion con los clientes [Los canales no se adecuan a los segmentos de mercado],0,2,0
+Relacion con el cliente,Pregunta 11 - Interaccion con los clientes [Estrecha relacion con los clientes],4,3,0
+Relacion con el cliente,Pregunta 11 - Interaccion con los clientes [Poca relacion con los clientes],0,3,0
+Relacion con el cliente,Pregunta 12 - Interaccion con los clientes [La calidad de la relacion esta en consonancia con los segmentos de mercado],3,3,0
+Relacion con el cliente,Pregunta 12 - Interaccion con los clientes [La calidad de la relacion no esta en consonancia con los segmentos de mercado],0,3,0
+Relacion con el cliente,Pregunta 13 - Interaccion con los clientes [Las relaciones vinculan a los clientes mediante un elevado coste de cambio],3,3,0
+Relacion con el cliente,Pregunta 13 - Interaccion con los clientes [El coste de cambio es bajo],0,3,0
+Relacion con el cliente,Pregunta 14 - Interaccion con los clientes [Nuestra marca es fuerte],2,3,0
+Relacion con el cliente,Pregunta 14 - Interaccion con los clientes [Nuestra marca es debil],0,3,0
